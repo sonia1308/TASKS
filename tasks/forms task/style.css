@@ -3,15 +3,30 @@ body {
     background-color: rgb(171, 171, 240);
     margin: 0;
     padding: 0;
+    color: #ffffff;
 }
 
-#form-bg {
+#general {
+    padding: 20px;
+}
+
+#form-container {
     background-image: url(./assets/images/login-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
     margin: 50px auto;
+    padding: 100px 300px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#form-bg {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -40,13 +55,22 @@ h1 {
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 20px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
+
+    
+
 #email{
     background-image: url(./assets/images/envelope-regular.svg);
 }
+
 #password{
     background-image: url(./assets/images/lock-solid.svg);
 }
+
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -59,4 +83,31 @@ h1 {
 
 .forgot-password {
     align-self: flex-end;
-    margin-bot
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 15px 0; 
+
+}
+
+.register-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a{
+    color: #ffffff;
+}

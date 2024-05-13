@@ -8,32 +8,37 @@
     <script src="https://kit.fontawesome.com/c4d75d0101.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="form-bg">
-    <form>
-        <h1>Login</h1>
+    <div id="general">
+        <div id="form-container">
+            <div id="form-bg">
+                <form>
+                    <h1>Login</h1>
 
-        <div class="input-box email">
-            <input required placeholder="Email ID" type="email" id="email" class="with-icon"/>
+                    
+                    <div class="input-box">
+                        <input required placeholder="Email ID" type="email" id="email" />
+                    </div>
+            
+                    
+                    <div class="input-box">
+                        <input placeholder="Enter your password" type="password" id="password" />
+                    </div>
+
+                    
+                    <label for="checkbox">
+                        <input type="checkbox" id="checkbox" />Remember me
+                    </label>
+
+                   
+                    <span class="forgot-password">Forgot password?</span>
+
+                    
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="register-text">Don't have an account? <a href="#">Register</a></div>
+            </div>
         </div>
-  
-        <div class="input-box password">
-            <input placeholder="Enter your password" type="password" id="password" class="with-icon"/>
-        </div>
-
-        <!-- Checkbox for Remember me -->
-        <label for="checkbox">
-            <input type="checkbox" id="checkbox" />Remember me
-        </label>
-
-        <!-- Forgot password -->
-        <span class="forgot-password">Forgot password?</span>
-
-        <!-- Login Button -->
-        <button type="submit">Login</button>
-    </form>
-
-    <!-- Register text -->
-    <div class="register-text">Don't have an account? <a href="#">Register</a></div>
     </div>
 </body>
 </html>

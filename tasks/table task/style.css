@@ -1,0 +1,79 @@
+body {
+    background-image: url(./assets/images/table-bg.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    font-family: sans-serif;
+}
+
+div.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+div.content {
+    background: rgba(255, 255, 255, 0.5);
+    /* padding: 20px; */
+    margin: 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#Customers-orders {
+    background-color: rgba(180, 173, 222, 0.3);
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Keep using flex */ */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+
+
+
+
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.demTable {
+    width: 100%;
+    border: none;
+    padding: 0;
+    border-spacing: 0;
+    margin: 20px 20px;
+    border-radius: 10px;
+}
+
+.demTable th,
+.demTable td {
+    border: none;
+    text-align: center;
+    padding: 10px;
+    text-align: left;
+}
+
+.demTable tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.821)
+}
+
+.demTable tr:nth-child(odd) {
+    background-color: rgba( 255,255, 255, 0.7)
+}
+
+
+
+
+.fa-solid.fa-arrow-up ,.fa-solid.fa-circle-arrow-down,.fa-solid.fa-arrow-down {
+    margin-left: 10px;
+}
+
+/* Style for text in the second column */
+.demTable tr td:nth-child(2) {
+    color: rgb(155, 88, 210, 1); /* Change this to the color you prefer */
+}

@@ -24,10 +24,10 @@ div.content {
     background-color: rgba(180, 173, 222, 0.3);
     padding: 10px;
     margin-top: 0;
-    border-radius: 10px; /* Rounded corners */
-    display: flex; /* Keep using flex */ */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    border-radius: 10px;  
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 
@@ -41,28 +41,29 @@ div.content {
     justify-content: center; 
 }
 
-.demTable {
+.Table {
     width: 100%;
     border: none;
     padding: 0;
     border-spacing: 0;
     margin: 20px 20px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
-.demTable th,
-.demTable td {
+.Table th,
+.Table td {
     border: none;
     text-align: center;
     padding: 10px;
     text-align: left;
 }
 
-.demTable tr:nth-child(even) {
+.Table tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.821)
 }
 
-.demTable tr:nth-child(odd) {
+.Table tr:nth-child(odd) {
     background-color: rgba( 255,255, 255, 0.7)
 }
 
@@ -73,7 +74,51 @@ div.content {
     margin-left: 10px;
 }
 
-/* Style for text in the second column */
-.demTable tr td:nth-child(2) {
-    color: rgb(155, 88, 210, 1); /* Change this to the color you prefer */
+
+.Table tr td:nth-child(2) {
+    color: rgb(155, 88, 210, 1); 
 }
+#customer{
+    color:rgb(155, 88, 210, 1);
+}
+
+.profiles {
+    border-radius: 50%;
+    width: 25px; /
+    height: 25px; 
+    object-fit: cover; 
+    margin-right: 10px;
+  }
+  
+  .status {
+    margin: 6px 10px; 
+    display: inline-block;
+    padding: 10px 30px; 
+    background-color: #f1fa6bdb; 
+    color: rgb(0, 0, 0); 
+    border-radius: 30px; 
+    text-align: center; 
+    width: calc(100% - 40px); 
+    position: relative; 
+    overflow: hidden; /
+}
+
+.status::before,
+.status::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #f1fa6bdb; 
+    border-radius: 50%;
+}
+
+.status::before {
+    left: -50%;
+}
+
+.status::after {
+    right: -50%;
+}
+

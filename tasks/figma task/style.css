@@ -60,7 +60,7 @@ nav {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto  
 }
 p{
@@ -126,7 +126,7 @@ h6{
     margin: 120px 0;
     padding:  90px;
     
-    gap: 150px;
+    gap: 160px;
     align-items: center;
 
 }
@@ -212,4 +212,54 @@ rectangle {
 .aro-two rectangle{
     width: 126px;
 }
-
+/* .extra-padding{
+    display: flex;
+    align-items: center;
+}
+.extra-link{
+    width: 80%;
+    
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+.extra-link rectangle{
+    padding: 40px 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 80PX;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.extra-link{
+    background-image: url("./assets/images/AroLink.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feedback h5{
+    font-size: 21px;
+}
+.feedback{
+    background-color: rgb(36, 22, 11);
+    color: #fff;
+    display: flex;
+   /*  align-items: center; */
+    justify-content: center;
+    padding: 45px 90px 60px;
+    gap: 40px;
+    width: 100%;
+    height: 340px;
+}
+.sm-feedback p{
+    margin-bottom: 60px;
+}
+.cm-feedback p, .eb-feedback p{
+    margin-bottom: 30px;
+}

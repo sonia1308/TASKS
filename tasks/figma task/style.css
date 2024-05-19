@@ -1,4 +1,9 @@
-
+* {
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0;
+    font-weight: 400;
+  }
 
 :root {
     --button-color: rgb(239, 174, 53);
@@ -35,7 +40,7 @@ nav {
 }
 
 .intro {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/images/Intro.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/Intro.png");
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -56,9 +61,7 @@ nav {
 
 .container {
     width: 90%;
-    margin: 0 auto;
-    
-    
+    margin: 0 auto  
 }
 p{
     font-size: 18px;
@@ -84,7 +87,10 @@ h6{
 .intro-content {
     font-size: 17px;
 }
-
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+}
 .introducing {
     display: flex;
     justify-content: center;
@@ -159,3 +165,51 @@ rectangle {
     padding: 180px 0;
 
 }
+.aro-in-action{
+    background-image: url("./assets/images/AroInAction.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: ;
+}
+.aro-in-action-text p{
+    margin: 30px auto 60px;
+
+}
+.fa-solid.fa-play{
+    
+}
+
+.aro-two{
+    display: flex;
+    /* margin: 120px 0; */
+    padding:  90px;
+    
+    gap: 150px;
+    align-items: center;
+
+}
+.aro-in-action button{
+    padding: 58px;
+}
+
+.watch-now{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    
+}
+.watch-now h4{
+    font-size: 40px;
+    /* margin-bottom: 15px; */
+}
+.watch-now h6{
+    margin-top: 10px
+}
+
+.aro-two rectangle{
+    width: 126px;
+}
+

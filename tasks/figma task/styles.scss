@@ -255,10 +255,15 @@ rectangle {
     
     color: #fff;
     display: flex;
-    align-items: center; 
+    /* align-items: center;  */
     justify-content: space-between;
     gap: 40px;
     width: 100%;
+}
+.sm-feedback , .cm-feedback , .eb-feedback{
+    display: flex;
+    justify-content: space-between;
+
 }
 .sm-feedback p{
     margin-bottom: 60px;

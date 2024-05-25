@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0;
+    font-weight: 400;
+  }
+
+:root {
+    --button-color: rgb(239, 174, 53);
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+.button {
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: 80px;
+    padding: 15px 30px;
+}
+
+
+.button.btnlink {
+    padding: 10px 35px;
+}
+
+nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/Intro.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.intro-content {
+    position: relative;
+}
+
+.intro-content-text {
+    /* position: absolute;
+    top: 319px;
+    left: 90px; */
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto  
+}
+p{
+    font-size: 18px;
+    line-height: 30.6px;
+}
+h1 {
+    font-size: 60px;
+}
+h2{
+    font-size: 92px;
+    li
+}
+h3 {
+    font-size: 42px;
+}
+h4{
+    font-size: 58px;
+}
+h5{
+    font-size: 16px;
+}
+h6{
+    font-size: 10px;
+}
+
+.intro-content {
+    font-size: 17px;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+.introducing {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 10px;
+    margin: 120px auto;
+}
+
+.introducing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.link {
+    display: flex;
+    /*align-items: flex-start;*/
+    align-items: center;
+    gap: 10px;
+}
+#How-it-works-button{
+    border-bottom: 2px solid rgba(36, 22, 11, 0.122);
+    padding: 4px;
+    margin-bottom: 2px;
+}
+.introducing-img img{
+    width: 100%;
+}
+
+.aro{
+    display: flex;
+    margin: 120px 0;
+    padding:  90px;
+    
+    gap: 160px;
+    align-items: center;
+
+}
+.aro-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content:end;
+    
+}
+.aro .aro-img  img{
+margin-top: 164px;
+width: 460px;
+height: 306px;
+}
+rectangle {
+    height: 2px;
+    width: 513px;
+    background-color: #555;
+}
+
+.featured-in-icons {
+    width: 70%;
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .featured-in-icons img{
+    width: 104px;
+    /* height: 36px; */
+}
+
+.featured-in{
+    text-align: center;
+    padding: 180px 0;
+
+}
+.aro-in-action{
+    background-image: url("./assets/images/AroInAction.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: ;
+}
+.aro-in-action-text p{
+    margin: 30px auto 60px;
+
+}
+.fa-solid.fa-play{
+    
+}
+
+.aro-two{
+    display: flex;
+    /* margin: 120px 0; */
+    padding:  90px;
+    
+    gap: 150px;
+    align-items: center;
+
+}
+.aro-in-action button{
+    padding: 58px;
+}
+
+.watch-now{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    
+}
+.watch-now h4{
+    font-size: 40px;
+    /* margin-bottom: 15px; */
+}
+.watch-now h6{
+    margin-top: 10px
+}
+
+.aro-two rectangle{
+    width: 126px;
+}
+/* .extra-padding{
+    display: flex;
+    align-items: center;
+}
+.extra-link{
+    width: 80%;
+    
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+.extra-link rectangle{
+    padding: 40px 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 80PX;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.extra-link{
+    background-image: url("./assets/images/AroLink.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feedback h5{
+    font-size: 21px;
+}
+.feedback{
+    background-color: rgb(36, 22, 11);
+    color: #fff;
+    display: flex;
+   /*  align-items: center; */
+    justify-content: center;
+    padding: 45px 90px 60px;
+    gap: 40px;
+    width: 100%;
+    height: 340px;
+}
+.sm-feedback p{
+    margin-bottom: 60px;
+}
+.cm-feedback p, .eb-feedback p{
+    margin-bottom: 30px;
+}
+.why-aro{
+    text-align: center;
+    height: 200vh;
+}
+.why-aro-flexbox{
+    display: flex;
+   
+   justify-content: center;
+    gap: 32px;
+}
+.why-aro h5{
+    margin:60px auto 112px;
+    line-height: 30px;
+    font-size: 18px;    
+}
+.why-aro h1{
+    margin-top: 140px;
+  line-height: 33px; 
+}
+.why-aro img{
+    height: 360px;
+}
+.aro-flexbox p{
+    font-size: 27px;
+    line-height: 35px;
+    margin: 27px auto 10px;
+}
+.aro-flexbox{
+    text-align:start;
+     align-items: stretch; */
+    
+    display: flex; 
+    flex-direction: column;
+    gap: 18px;
+    
+}
+.interactions {
+    height: 240vh;
+    /* padding: 0 160px; */
+    text-align: center;
+}
+.interactions h2{
+    margin-top: 400px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 15px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    border: 15px solid #fff;
+    position: relative; 
+}
+
+.grid-container :first-child {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.grid-container :nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.grid-container :nth-child(3) {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 15px solid #fff;
+    position: relative; 
+}
+
+.grid-item img {
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+
+.grid-item-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Ensure text is above the image */
+}
+
+.grid-item-text rectangle {
+    background-color: var(--button-color);
+    color: black;
+    padding: 30px 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 80px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto ;
+}

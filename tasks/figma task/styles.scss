@@ -2,7 +2,7 @@
     --button-color: rgb(239, 174, 53);
 }
 html{
-    font-size: 10px;
+    font-size: 1vw;
 }
 
 * {
@@ -13,10 +13,9 @@ html{
   }
 
 
-
-
 img {
     width: 100%;
+   
 }
 
 .button {
@@ -39,7 +38,7 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/Intro.png");
     background-size: cover;
     padding: 20rem 0;
-    width: 100vw;
+   /*  width: vw;100 */
     background-position: center center ;
     background-repeat: no-repeat;
     display: flex;
@@ -67,13 +66,13 @@ h1 {
     font-size: 6rem;
 }
 h2{
-    font-size: 9rem;
+    font-size: 9.2rem;
 }
 h3 {
-    font-size: 4rem;
+    font-size: 4.2rem;
 }
 h4{
-    font-size: 6rem;
+    font-size: 5.8rem;
 }
 h5{
     font-size: 1.6rem;
@@ -81,6 +80,7 @@ h5{
 h6{
     font-size: 1rem;
 }
+
 
 .intro-content {
     font-size: 1.7rem;
@@ -118,9 +118,9 @@ h6{
     padding: 4px;
     margin-bottom: 2px;
 }
-.introducing-img img{
+/* .introducing-img img{
     width: 100%;
-}
+} */
 
 .aro{
     display: flex;
@@ -252,7 +252,7 @@ rectangle {
     background-color: rgb(36, 22, 11);
 }
 .feedback{
-    
+    padding: 5rem 0;
     color: #fff;
     display: flex;
     /* align-items: center;  */
@@ -263,7 +263,7 @@ rectangle {
 .sm-feedback , .cm-feedback , .eb-feedback{
     display: flex;
     justify-content: space-between;
-
+    flex-direction: column;
 }
 .sm-feedback p{
     margin-bottom: 60px;
@@ -282,7 +282,7 @@ rectangle {
     gap: 32px;
 }
 .why-aro h5{
-    margin:60px auto 112px;
+
     line-height: 30px;
     font-size: 1.8rem;    
 }
@@ -291,7 +291,7 @@ rectangle {
   line-height: 33px; 
 }
 .why-aro img{
-    height: auto;
+    height: 25vw;
 }
 .aro-flexbox p{
     font-size: 2.7rem;
@@ -308,7 +308,7 @@ rectangle {
     
 }
 .interactions {
-    height: 200vh;
+   /*  height: 200vh; */
     /* padding: 0 160px; */
     text-align: center;
 }
@@ -446,6 +446,7 @@ rectangle {
     border-top: 1px solid rgba(112, 112, 108, 0.2);
     margin-top: 5em;
     padding-top: 5em;
+    
 }
 .bluetooth{
     display: flex;
@@ -470,23 +471,60 @@ rectangle {
     gap:1.2em;
 }
 
-@media (max-width:768px) {
-    .intro-content-text h1{
-        font-size: 4rem;
+@media (max-width: 992px) {
+
+    html{
+        font-size: 1vw;
     }
-    .intro{
-        padding: 8rem;
+    .intro {
+        padding: 10rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .introducing{
-        display: flex;
-        flex-wrap: wrap;
+
+    .introducing {
+        flex-direction: column;
+        gap: 2rem;
     }
-}
-@media(max-width:582px){
-    .intro-content-text h1{
-        font-size: 3rem;
+
+    .aro {
+        flex-direction: column;
+        gap: 2rem;
     }
-    .intro{
-        padding: 6rem;
+
+    .aro-two {
+        flex-direction: column;
+    }
+
+    .feedback {
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .why-aro-flexbox{
+        flex-direction: column;
+    }
+    .aro-flexbox{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .aro-flexbox p{
+        margin: 0;
+    }
+ 
+
+    .introducing-text{
+        align-items: center;
+    } 
+    .footer{
+        flex-direction: column;
+        gap: 2em;
+    }
+    .policy{
+        flex-wrap: nowrap;
+    }
+    .grid-container {
+       
     }
 }

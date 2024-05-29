@@ -2,7 +2,7 @@
     --button-color: rgb(239, 174, 53);
 }
 html{
-    font-size: 1vw;
+    font-size: 10px;
 }
 
 * {
@@ -81,7 +81,6 @@ h6{
     font-size: 1rem;
 }
 
-
 .intro-content {
     font-size: 1.7rem;
 }
@@ -130,6 +129,9 @@ h6{
     gap: 16rem;
     align-items: center;
 
+}
+.aro p{
+    border-bottom:2px solid rgba(177, 108, 234, 0.102);
 }
 .aro-text{
     display: flex;
@@ -180,23 +182,36 @@ rectangle {
     color: #fff;
 
 }
-.aro-in-action-text p{
+.aro-in-action-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    justify-content: flex-start;
+}
+/* .aro-in-action-text p{
     margin: 30px auto 60px;
 
-}
+} */
 .aro-two{
     display: flex;
     /* margin: 120px 0; */
-    padding:  90px;
+    padding:  90px 0;
     justify-content: center;
     gap: 150px;
     align-items: center;
+}
 
+rectangle-2 {
+    height: 2px;
+    background-color: rgba(177, 108, 234, 0.102);
 }
 .aro-in-action button{
     padding: 58px;
 }
-
+/* .aro-two>.aro-text>h5{
+    border-bottom:  solid rgba(36, 22, 11, 0.122);
+} */
 .watch-now{
     display: flex;
     gap: 16px;
@@ -211,9 +226,9 @@ rectangle {
     margin-top: 10px
 }
 
-.aro-two rectangle{
+/* .aro-two rectangle{
     width: 126px;
-}
+} */
 /* .extra-padding{
     display: flex;
     align-items: center;
@@ -266,32 +281,35 @@ rectangle {
     flex-direction: column;
 }
 .sm-feedback p{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .cm-feedback p, .eb-feedback p{
     margin-bottom: 30px;
 }
 .why-aro{
     text-align: center;
-    height: 200vh;
+ /*    height: 200vh; */
 }
 .why-aro-flexbox{
     display: flex;
-   
    justify-content: center;
     gap: 32px;
 }
 .why-aro h5{
 
     line-height: 30px;
-    font-size: 1.8rem;    
+    font-size: 1.8rem;   
+   
+}
+.why-aro>h5{
+    margin-bottom: 30rem; 
 }
 .why-aro h1{
     margin-top: 140px;
   line-height: 33px; 
 }
 .why-aro img{
-    height: 25vw;
+    height: 35rem;
 }
 .aro-flexbox p{
     font-size: 2.7rem;
@@ -299,9 +317,7 @@ rectangle {
     margin: 27px auto 10px;
 }
 .aro-flexbox{
-    text-align:start;
-     align-items: stretch; 
-    
+    text-align:start; 
     display: flex; 
     flex-direction: column;
     gap: 18px;
@@ -311,6 +327,7 @@ rectangle {
    /*  height: 200vh; */
     /* padding: 0 160px; */
     text-align: center;
+    margin: 25rem 0;
 }
 .interactions p{
     margin: 4rem auto 30rem;
@@ -470,11 +487,15 @@ rectangle {
     justify-content: end;
     gap:1.2em;
 }
-
-@media (max-width: 992px) {
-
+/* @media(max-width:1200px){
     html{
-        font-size: 1vw;
+        font-size: 10px;
+        gap: 6rem;
+    }
+} */
+@media(max-width:992px){
+    html{
+        font-size: 10px;
     }
     .intro {
         padding: 10rem 0;
@@ -482,29 +503,32 @@ rectangle {
         align-items: center;
         text-align: center;
     }
-
     .introducing {
         flex-direction: column;
-        gap: 2rem;
+        gap: 2rem;  
     }
-
     .aro {
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        gap: 4rem;
     }
-
-    .aro-two {
-        flex-direction: column;
-    }
-
+   /*  .aro-text{
+        text-align: center;
+    } */
     .feedback {
         flex-direction: column;
         gap: 4em;
     }
-
-    .why-aro-flexbox{
-        flex-direction: column;
+    .aro-flexbox p{
+        line-height: 4rem;
+    }       
+    .why-aro h5{
+        line-height: 2.5rem;
     }
+    
+    .why-aro-flexbox{
+        flex-direction:column ;
+     }
     .aro-flexbox{
         flex-direction: row;
         align-items: flex-start;
@@ -512,8 +536,13 @@ rectangle {
     .aro-flexbox p{
         margin: 0;
     }
- 
-
+    .display-none{
+        display: none;
+    }
+    .grid-container :nth-child(3) {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+    }
     .introducing-text{
         align-items: center;
     } 
@@ -523,8 +552,55 @@ rectangle {
     }
     .policy{
         flex-wrap: nowrap;
+        
     }
-    .grid-container {
-       
+    .footer-intro-text{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:576px){
+    html{
+        font-size: 7px;
+    }
+    .aro-text{
+        text-align: center;
+        gap:5rem;
+    }
+    .featured-in{
+        gap: 4rem;
+    }
+    .featured-in-icons {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+       row-gap: 4rem;
+    }
+    .aro-in-action {
+        height: auto;
+    }
+    .aro-in-action-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+        margin: 20rem 0;
+    }
+    .aro-two{
+        flex-direction: column;
+    }
+    .aro-in-action button {
+        padding: 32px;
+    }
+    .aro-flexbox{
+        flex-direction: column;
+    }
+    .why-aro-flexbox{
+        gap: 15rem;
+    }
+    .why-aro img {
+        height: auto;
+        
+    }
+    .why-aro>h5{
+        margin-bottom: 15rem;
     }
 }

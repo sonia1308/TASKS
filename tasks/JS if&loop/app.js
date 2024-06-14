@@ -284,11 +284,24 @@ for (let i = 10; i > 0; i--) {
     a=a+`*`
     console.log(a);
 } */
-let space = 10
+/* let space = 10
 for (let i = space; i >0; i--) {
     let star ="";
     for (let j = 0; j < i; j++) {
         star+="*"
     }
     console.log(star);
+} */
+
+/* let n = +prompt("Enter a number:");
+
+for (let i = n; i >= 1; i--) {
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+        return false;
+    }
+  }
+  return true;
 }
+
+ */

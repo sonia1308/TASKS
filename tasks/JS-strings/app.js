@@ -66,25 +66,11 @@ checkPriceFormat() */
 
 //#region homeTask5
 /* let fullName= prompt(`enter your full name`)
-let fullNameShorted = fullName.slice(0 , fullName.indexOf(" ")) + fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ")+2)+ `.`+fullName.slice(fullName.lastIndexOf(" ")+1, fullName.lastIndexOf(" ")+2)+`.`
+let fullNameShorted = fullName.slice( 0, fullName.indexOf(" ")) + fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ")+2)+ `.`+fullName.slice(fullName.lastIndexOf(" ")+1, fullName.lastIndexOf(" ")+2)+`.`
 console.log(fullNameShorted); */
 //#endregion
 
 //#region homeTask6
-/* const userInput = prompt("YYYY-MM-DD formatında tarix daxil edin");
-const date = new Date(userInput);
- */
-/* let phoneNumber = prompt(`enter your number in "055 555 55 55" format ` ) // 055 555 55 55
-let a  = phoneNumber.split(` `)
-
-console.log(a.join(`-`)); */
-/* for (let i = 0; i < numberString.length; i++) {
-    numberString[i]
-    console.log(numberString)
-} */
-/* let correctedNUmber = numberString.slice(0,length(2))+`-`  */
-//#region homeTask6
-
 /* let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
 if (userDateInput.slice(0, 4)===Number()) {
     let userDate = new Date(userDateInput)
@@ -97,6 +83,18 @@ else{
     console.log(`Wrong number`);
 }
  */
+/* let phoneNumber = prompt(`enter your number in "055 555 55 55" format ` ) // 055 555 55 55
+let a  = phoneNumber.split(` `)
+
+console.log(a.join(`-`)); */
+/* for (let i = 0; i < numberString.length; i++) {
+    numberString[i]
+    console.log(numberString)
+} */
+/* let correctedNUmber = numberString.slice(0,length(2))+`-`  */
+//#region homeTask6
+
+
 // let userDateFormatted = userDate3.slice(userDate3.indexOf(` `), userDate3.lastIndexOf(` `))
 
 // console.log(userDate3);
@@ -236,11 +234,11 @@ removeCharacterFromString(`Loremn ipsum dolar sit amet`) */
     userEmail.includes(`@yahoo.com`)||
     userEmail.includes(`@yandex.com`))
     {
-        console.log(`salam`);
+        console.log(`email is valid`);
     }
     else{
         console.log(`email youve entered is wrong`);
     }
 }
-checkIsEmail(`mdfhgj.@email.co`) */
+checkIsEmail(`mdfhgj@email.com`) */
 //#endregion

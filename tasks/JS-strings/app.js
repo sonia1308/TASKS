@@ -1,4 +1,4 @@
-//#region 
+//#region
 /* function includesEmail(email) {
     // code...
   }
@@ -20,7 +20,6 @@ const date = new Date(2005 ,7,13 );
 const diff= now.getTime() - date.getHours();
 console.log(diff); */
 //#endregion
-
 
 //#region homeTask1
 
@@ -71,7 +70,6 @@ let fullNameShorted = fullName.slice(0 , fullName.indexOf(" ")) + fullName.slice
 console.log(fullNameShorted); */
 //#endregion
 
-
 //#region homeTask6
 /* const userInput = prompt("YYYY-MM-DD formatında tarix daxil edin");
 const date = new Date(userInput);
@@ -86,27 +84,25 @@ console.log(a.join(`-`)); */
 } */
 /* let correctedNUmber = numberString.slice(0,length(2))+`-`  */
 //#region homeTask6
-/* 
-let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
-if (userDateInput.slice(0, 4)!==NaN) {
+
+/* let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
+if (userDateInput.slice(0, 4)===Number()) {
     let userDate = new Date(userDateInput)
     let userDateString= `${userDate}`
     let month = userDateString.slice(3, 7)
-    let dateFormatted= userDate.getDate() +` `+month.trim()+` ` + userDate.getFullYear()
+    let dateFormatted= userDate.getDate() +` `+month+` ` + userDate.getFullYear()
     console.log(dateFormatted);
 }
 else{
-    console.log(`HEEEEEEEEEELp`);
-} */
+    console.log(`Wrong number`);
+}
+ */
+// let userDateFormatted = userDate3.slice(userDate3.indexOf(` `), userDate3.lastIndexOf(` `))
 
-
-
-/* let userDateFormatted = userDate3.slice(userDate3.indexOf(` `), userDate3.lastIndexOf(` `))
-
-console.log(userDate3);
-console.log(userDateFormatted);
-let userDate2 = userDate.split(`.`)
-console.log(userDate2); */
+// console.log(userDate3);
+// console.log(userDateFormatted);
+// let userDate2 = userDate.split(`.`)
+// console.log(userDate2);
 //#endregion
 
 //#region strings-advancedFromRLesson
@@ -126,7 +122,6 @@ findLetter(`admin`, `n`)
 findLetter(`salam`, `a`)
 findLetter(`salam`, `z`)
  */
-
 
 /* const message = `hello to sonia's world`
 let hiddenMessage 
@@ -164,7 +159,7 @@ getIndexOfDote(`sonia.sonia.sonia...`)
  */
 //#endregion
 //#region homeTask8
-const userInput = prompt(`enter your text`)
+/* const userInput = prompt(`enter your text`)
 
 function checkNumbers(text) {
     let flag =false
@@ -179,5 +174,73 @@ function checkNumbers(text) {
             console.log("Metinin icinde reqem yoxdur");
         }
 }
-checkNumbers(`${userInput}`)
+checkNumbers(`${userInput}`) */
+//#endregion
+
+//#region homeTask9
+/* let usedCount = 0
+function repeatSymbolCounter(string, char) {
+    for (let i = 0; i <= string.length; i++) {
+        if (string[i]===char) {
+            usedCount++
+        }
+    }
+    console.log(usedCount)
+}
+repeatSymbolCounter(`ssssssoniia`,`i`) */
+//#endregion
+
+
+//#region homeTask10
+/* 
+function capitalize(str) {
+  str = str[0].toUpperCase() + str.slice(1, str.length).toLowerCase();
+  return str
+}
+console.log(capitalize("soGHTJia"));
+ */
+//#endregion
+
+//#region homeTask 11
+/* function snakeToKebab(str) {
+   kebabCase= str.toLowerCase().split(`_`)
+   console.log(kebabCase.join(`-`));
+}
+snakeToKebab(`THIS_IS_FOR_TESTING`) */
+//#endregion
+
+//#region homeTask 12
+/* function changeFirstWOrd(word, firstLetter) {
+    let word1= String(word)
+    let firstLetter1 = String(firstLetter)
+    let dff =word1.replace(word1,firstLetter1)
+    let fdd =word1.slice(1)
+    return dff + '' + fdd 
+}
+console.log(changeFirstWOrd("Kamil","R")); */
+//#endregion
+//#region homeTask 13
+/* function removeCharacterFromString(word) {
+    let slicedWord = word.slice(1)
+    console.log(slicedWord);
+}
+removeCharacterFromString(`Loremn ipsum dolar sit amet`) */
+//#endregion
+
+//#region homeTask 14
+/* function checkIsEmail(email){
+    userEmail= String(email)
+    if (userEmail.includes(`@email.com`)||
+    userEmail.includes(`@outlook.com`)||
+    userEmail.includes(`@mail.ru`)||
+    userEmail.includes(`@yahoo.com`)||
+    userEmail.includes(`@yandex.com`))
+    {
+        console.log(`salam`);
+    }
+    else{
+        console.log(`email youve entered is wrong`);
+    }
+}
+checkIsEmail(`mdfhgj.@email.co`) */
 //#endregion

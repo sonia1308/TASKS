@@ -70,13 +70,13 @@ checkPriceFormat() */
 let fullNameShorted = fullName.slice(0 , fullName.indexOf(" ")) + fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ")+2)+ `.`+fullName.slice(fullName.lastIndexOf(" ")+1, fullName.lastIndexOf(" ")+2)+`.`
 console.log(fullNameShorted); */
 //#endregion
+
+
 //#region homeTask6
 /* const userInput = prompt("YYYY-MM-DD formatında tarix daxil edin");
 const date = new Date(userInput);
  */
 /* let phoneNumber = prompt(`enter your number in "055 555 55 55" format ` ) // 055 555 55 55
-
-
 let a  = phoneNumber.split(` `)
 
 console.log(a.join(`-`)); */
@@ -86,11 +86,30 @@ console.log(a.join(`-`)); */
 } */
 /* let correctedNUmber = numberString.slice(0,length(2))+`-`  */
 //#region homeTask6
-
-/* let userDate = new Date(prompt(`enter you date in YYYY.MM.DD  format`))
-if (userDate.charAt(4)===`.` &&  userDate.charAt(7)===`.`) {
-    
+/* 
+let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
+if (userDateInput.slice(0, 4)!==NaN) {
+    let userDate = new Date(userDateInput)
+    let userDateString= `${userDate}`
+    let month = userDateString.slice(3, 7)
+    let dateFormatted= userDate.getDate() +` `+month.trim()+` ` + userDate.getFullYear()
+    console.log(dateFormatted);
+}
+else{
+    console.log(`HEEEEEEEEEELp`);
 } */
+
+
+
+/* let userDateFormatted = userDate3.slice(userDate3.indexOf(` `), userDate3.lastIndexOf(` `))
+
+console.log(userDate3);
+console.log(userDateFormatted);
+let userDate2 = userDate.split(`.`)
+console.log(userDate2); */
+//#endregion
+
+//#region strings-advancedFromRLesson
 /* 
 function findLetter(w, l) {
     if (w.indexOf(l)===w.lastIndexOf(l)&& w.indexOf(l)!==-1) {
@@ -122,15 +141,43 @@ switch (op) {
     case `+`:
         console.log(n1+n2);
         break;
-        case `+`:
-            console.log(n1+n2);
-            break;
-        case `-`:
-            console.log(n1-n2);
-            break;
-        case `+`:
-            console.log(n1+n2);
-            break;
+    case `-`:
+        console.log(n1-n2);
+        break;
+    case `*`:
+        console.log(n1*n2);
+        break;
+    case `/`:
+        console.log(n1/n2);
+        break;
     default:
         break;
 } */
+//#endregion
+
+//#region homeTaks7
+/* function getIndexOfDote(text) {
+    const doteIndex = text.indexOf(`.`)
+    console.log(doteIndex);
+}
+getIndexOfDote(`sonia.sonia.sonia...`)
+ */
+//#endregion
+//#region homeTask8
+const userInput = prompt(`enter your text`)
+
+function checkNumbers(text) {
+    let flag =false
+    for (let i = 0; i <= userInput.length; i++) {
+        if (!isNaN(parseInt(userInput[i]))) {
+           flag = true
+    }
+        }
+        if(flag){
+            console.log("Metinin icinde Reqem Var");
+        }else{
+            console.log("Metinin icinde reqem yoxdur");
+        }
+}
+checkNumbers(`${userInput}`)
+//#endregion

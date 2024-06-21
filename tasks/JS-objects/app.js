@@ -21,4 +21,3 @@ console.log(user) */
     let userEntires= object.entires(user)
     console.log (userEntires) */
 //#endregion
-

@@ -71,8 +71,8 @@ console.log(fullNameShorted); */
 //#endregion
 
 //#region homeTask6
-/* let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
-if (userDateInput.slice(0, 4)===Number()) {
+let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
+if (userDateInput.slice(0, 4)===Number()&&userDateInput.slice(5,7)===Number()&&userDateInput.slice(5,7)===Number(8,10)) {
     let userDate = new Date(userDateInput)
     let userDateString= `${userDate}`
     let month = userDateString.slice(3, 7)
@@ -82,7 +82,7 @@ if (userDateInput.slice(0, 4)===Number()) {
 else{
     console.log(`Wrong number`);
 }
- */
+
 /* let phoneNumber = prompt(`enter your number in "055 555 55 55" format ` ) // 055 555 55 55
 let a  = phoneNumber.split(` `)
 

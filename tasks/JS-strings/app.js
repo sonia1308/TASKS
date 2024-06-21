@@ -69,10 +69,11 @@ checkPriceFormat() */
 let fullNameShorted = fullName.slice( 0, fullName.indexOf(" ")) + fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ")+2)+ `.`+fullName.slice(fullName.lastIndexOf(" ")+1, fullName.lastIndexOf(" ")+2)+`.`
 console.log(fullNameShorted); */
 //#endregion
-
 //#region homeTask6
-let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
-if (userDateInput.slice(0, 4)===Number()&&userDateInput.slice(5,7)===Number()&&userDateInput.slice(5,7)===Number(8,10)) {
+/* let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
+if (userDateInput.slice(0, 4)!==isNaN
+&&userDateInput.slice(5,7)!==isNaN
+&&userDateInput.slice(8,10)!==isNaN) {
     let userDate = new Date(userDateInput)
     let userDateString= `${userDate}`
     let month = userDateString.slice(3, 7)
@@ -82,7 +83,7 @@ if (userDateInput.slice(0, 4)===Number()&&userDateInput.slice(5,7)===Number()&&u
 else{
     console.log(`Wrong number`);
 }
-
+ */
 /* let phoneNumber = prompt(`enter your number in "055 555 55 55" format ` ) // 055 555 55 55
 let a  = phoneNumber.split(` `)
 
@@ -208,14 +209,11 @@ snakeToKebab(`THIS_IS_FOR_TESTING`) */
 //#endregion
 
 //#region homeTask 12
-/* function changeFirstWOrd(word, firstLetter) {
-    let word1= String(word)
-    let firstLetter1 = String(firstLetter)
-    let dff =word1.replace(word1,firstLetter1)
-    let fdd =word1.slice(1)
-    return dff + '' + fdd 
+function changeFirstWOrd(word, letter) {
+    let newWord = word.replace(word.charAt(0),letter)
+    console.log(newWord);
 }
-console.log(changeFirstWOrd("Kamil","R")); */
+changeFirstWOrd(`Kamil`,`R`)
 //#endregion
 //#region homeTask 13
 /* function removeCharacterFromString(word) {

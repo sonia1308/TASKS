@@ -121,7 +121,7 @@ findLetter(`admin`, `n`)
 findLetter(`salam`, `a`)
 findLetter(`salam`, `z`)
  */
-
+//#endregion
 /* const message = `hello to sonia's world`
 let hiddenMessage 
 for (let i = 0; i < message.length; i++) {
@@ -209,11 +209,11 @@ snakeToKebab(`THIS_IS_FOR_TESTING`) */
 //#endregion
 
 //#region homeTask 12
-function changeFirstWOrd(word, letter) {
+/* function changeFirstWOrd(word, letter) {
     let newWord = word.replace(word.charAt(0),letter)
     console.log(newWord);
 }
-changeFirstWOrd(`Kamil`,`R`)
+changeFirstWOrd(`Kamil`,`R`) */
 //#endregion
 //#region homeTask 13
 /* function removeCharacterFromString(word) {

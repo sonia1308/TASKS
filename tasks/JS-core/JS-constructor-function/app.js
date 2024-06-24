@@ -5,7 +5,7 @@ function Client(fullName) {
   this.percentOfMinPayment = 10;
 
   this.getBalance = function () {
-    if (this.balance === 0 && this.creditLimit < 2000) {
+    if (this.balance === 0 && this.creditLimit <= 2000) {
       const debt =
         2000 -
         this.creditLimit +
@@ -14,7 +14,7 @@ function Client(fullName) {
     } else if (
       this.balance > 0 &&
       this.creditLimit !== 0 &&
-      this.creditLimit < 2000
+      this.creditLimit <= 2000
     ) {
       const debt =
         this.creditLimit -

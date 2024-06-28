@@ -75,12 +75,22 @@
 // }
 // facilis(numbers);
 //#endregion
-names.forEach(printWithDashes);
-names.forEach(printWithHearts);
-names.forEach(printWithIndex);
-function printWithDashes(text) {
-    console.log(`-`*13);
-}
+// const names = ["Michael", "Trevor", "Franklin", "Lamar", "Jimmy"];
+// names.forEach(printWithDashes);
+// names.forEach(printWithHearts);
+// names.forEach(printWithIndex);
+// function printWithDashes(text) {
+//     console.log(`------------\n${text}\n------------`);
+// }
+// function printWithHearts(text) {
+//     console.log(`<3<3<3<3<3<3<3<3<3<3<3<3\n${text}\n<3<3<3<3<3<3<3<3<3<3<3<3`);
+// }
+// function printWithIndex(text) {
+//     console.log(`${names.indexOf(text)} - ${text}`);
+// }
+// printWithDashes(names)
+// printWithHearts(names)
+// printWithIndex(names)
 //#region homeTask5
 
 //#endregion
@@ -138,16 +148,33 @@ function printWithDashes(text) {
 // //         pricesArray.forEach((value) => {
 // //             return `Price =${value} and tax is ${20/100*value}`
 // //         });
-// //     }  
+// //     }
 // // })
 
 // // console.log(pricesAndTaxes);
 // // #endregion
 
-
 // let priceAndTax = pricesArray.map((price)=>{
 //     return `Price =${price} and tax is ${20/100*price}`
-    
-// })
 
+// })
 // console.log(priceAndTax);
+//#endregion
+
+//#region homeTask10
+let salary = [
+  [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+  [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
+  [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
+  [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
+];
+function getAnnualSalary(salary) {
+    
+}
+//#endregion

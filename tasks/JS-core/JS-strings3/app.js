@@ -122,14 +122,12 @@
 //         console.log(false);
 //         return false
 //     }
-    
 //   }console.log(`true`);
 // }
 // checkCaps(`WRTYTRW e`);
 //#endregion
 
 //#region homeTask8
-
 // function repeat(n, s) {
 //     let integer = String(n)
 //     let result = ``

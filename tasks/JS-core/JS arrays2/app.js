@@ -38,7 +38,7 @@
 //   return a - b;
 // });
 // console.log(numArray);
-//#endregion
+// #endregion
 
 //#region homeTask4
 // let numbers = [12, -32, 235, 15, 1, 6, 5, 213, 14];
@@ -75,6 +75,7 @@
 // }
 // facilis(numbers);
 //#endregion
+
 // const names = ["Michael", "Trevor", "Franklin", "Lamar", "Jimmy"];
 // names.forEach(printWithDashes);
 // names.forEach(printWithHearts);
@@ -143,38 +144,118 @@
 // const pricesArray = [
 //   12.99, 24.95, 9.99, 34.5, 19.99, 42.75, 8.49, 15.0, 28.75, 10.99,
 // ];
-// // const pricesAndTaxes = pricesArray.map((priceAndTax)=>{
-// //     function priceAndTax( index, array) {
-// //         pricesArray.forEach((value) => {
-// //             return `Price =${value} and tax is ${20/100*value}`
-// //         });
-// //     }
-// // })
+// const pricesAndTaxes = pricesArray.map((priceAndTax)=>{
+//     function priceAndTax( index, array) {
+//         pricesArray.forEach((value) => {
+//             return `Price =${value} and tax is ${20/100*value}`
+//         });
+//     }
+// })
 
-// // console.log(pricesAndTaxes);
-// // #endregion
+// console.log(pricesAndTaxes);
+// #endregion
 
 // let priceAndTax = pricesArray.map((price)=>{
-//     return `Price =${price} and tax is ${20/100*price}`
+//     return `Price =${+price} and tax is ${+20/100*price}`
 
 // })
 // console.log(priceAndTax);
 //#endregion
 
 //#region homeTask10
-let salary = [
-  [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
-  [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
-  [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
-  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-  [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
-  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-  [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
-  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-  [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
-  [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
-];
-function getAnnualSalary(salary) {
-    
-}
+// let salary = [
+//   [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+//   [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
+//   [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
+//   [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
+// ];
+
+// let salaryEach = []
+// function getAnnualSalary() {
+//   let annualSalary = 0;
+//   salary.forEach((array) => {
+//     array.forEach((value) => {
+//       annualSalary += value;
+//     });  return annualSalary
+//   });
+//   salary.map((salaries)=>{
+//     val.forEach
+//     return {first :}
+//   })
+//   function salaries(annualSalary) {
+//     return salaryEach.push(annualSalary)
+//   }
+// }
+// console.log(getAnnualSalary());
+
 //#endregion
+//#region homeTask10
+//#region homeTask10
+// let salary = [
+//   [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+//   [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
+//   [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
+//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+//   [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
+//   [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
+// ];
+// function getSalaries(salary) {
+//     let result
+//     let salaries= []
+//     salary.forEach(array => {
+//         result=0    //now each time salary counting will start from 0
+//         array.forEach(element => {
+//             result+=element
+//         });return salaries.push({result})
+//     });
+//     console.log(salaries);
+// }
+// function getMonthlySalary(month) {
+//     let monthlySalary=[]
+//     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//     salary.forEach(array => {
+//              monthlySalary.push(`salary for ${months[month-1]} is ${array[month-1]}`)
+//     });console.log(monthlySalary);
+//     return
+// }
+// function getQuarterSalary(param) {
+//   let quarterSalary = [];
+//   let quarterResult =0
+//   let sliceResult
+//   salary.forEach((array) => {
+//     sliceResult=0
+//     switch (param) {
+//       case 1:
+//         quarterSalary.push(array.slice(0, 3));
+//         break;
+//       case 2:
+//         quarterSalary.push(array.slice(3, 6));
+//         break;
+//       case 3:
+//         quarterSalary.push(array.slice(6, 9));
+//         break;
+//       case 4:
+//         quarterSalary.push(array.slice(9, 12));
+//         break;
+//     }array.forEach(element => {
+//       sliceResult+=element
+//     });return quarterResult+=sliceResult
+//   });console.log(quarterResult);   
+  
+//   return quarterResult;
+// }
+// getSalaries(salary)
+// getMonthlySalary(2)
+// getMonthlySalary(3)
+// getQuarterSalary(2);
+

@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(77, 77, 139);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+.dice-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dices-main {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.dice , .dice2{
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffffaa;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+}
+.dot {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+}
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.two :last-child {
+  align-self: flex-end;
+}
+
+.three :nth-child(2) {
+  align-self: center;
+}
+.three :last-child {
+  align-self: flex-end;
+}
+.four,
+.five,
+.six {
+  /* display: flex;
+    justify-content: baseline; */
+}
+.four > .column,
+.five > .column,
+.six > .column {
+  /* display: flex;/ */
+  flex-direction: column;
+  justify-content: space-between;
+}
+.five > .dot {
+  align-self: center;
+}
+
+.four,
+.six {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-content: space-between;
+}
+
+.five {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.five .dot:nth-child(3) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}

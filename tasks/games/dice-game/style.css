@@ -5,19 +5,25 @@ body {
   padding: 0;
   color: #ffffff;
 }
+/* #header{} */
 h1{
   margin-top: 4rem;
+  text-align: center;
 }
 .dice-game {
+  margin-top: 4rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column; */
+  align-items:end;
+  justify-content: center;
+  gap: 10rem;
 }
 #dices-main {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: ;
   gap: 50px;
 }
 .dices{
@@ -28,9 +34,9 @@ h1{
   display: flex;
   justify-content: space-between;
   background-color: #ffffffaa;
-  padding: 10px;
-  width: 120px;
-  height: 120px;
+  padding: 1rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 10%;
 }
 #players{
@@ -94,18 +100,18 @@ h1{
   justify-self: center;
 }
 #buttons{
-  margin: 4rem auto 0;
+  /* margin: 4rem auto 0; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-#play ,#change-name{
+#play ,#change-name, #pick-rounds{
   /* margin: 80px auto; */
   display: block; 
   background-color: #a2ff9298;
-  padding: 10px;
-  width: 18rem;
-  height: 70px;
+  padding: 1rem;
+  width: 13rem;
+  height: 4rem;
   border-radius: 15px;
   border: none; 
   text-align: center;
@@ -115,12 +121,12 @@ h1{
   transition: background-color 0.3s, transform 0.3s; 
 }
 
-#play:hover , #change-name:hover {
+#play:hover , #change-name:hover , #pick-rounds:hover{
   background-color: #ffffffcc;
   transform: scale(1.05); 
 }
 
-#play:active #change-name:active{
+#play:active #change-name:active, #pick-rounds:active{
   background-color: #ffffff88; 
   transform: scale(0.95); 
 }

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dice2 = document.querySelector(".dice2");
   const playSoundButton = document.getElementById("play");
   const changePlayerName = document.getElementById("change-name");
+  const pickRounds = document.getElementById(`pick-rounds`)
   const mySound = new Audio("./assets/dice.mp3");
 
   //#region default
@@ -23,19 +24,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   //#endregion
 
-  //#region changeName
+  //#region changeName  //add try-catch and throw here
   function changeName() {
-   let player1 = prompt(`change Player1 name`);
-   let player2 = prompt(`change Player2 name`);
-    if (player1.length >= 1 && player2.length >= 1) {
-      p1= player1
-      p2= player2
+    try {
+      let player1 = prompt(`change Player1 name`);
+      let player2 = prompt(`change Player2 name`);
+
+      if (player1.length < 1 && player2.length < 1) {
+        throw new Error`dontDoThisAgain`();
+      }else{
+        p1 = player1;
+        p2 = player2;
+        document.getElementById("player1").innerHTML = p1;
+        document.getElementById("player2").innerHTML = p2;
+      }
+    } catch (error) {
+      console.error("An error occurred:", error.message);
+      alert(`Name cant be empty`);
     }
   }
-//#endregion
+
+  //#endregion
   changePlayerName.addEventListener("click", function () {
     changeName();
   });
+
+  //#region chooseRounds
+//   let round =1
+// function rounds(num) {
+//   for (let i = 0; i <= num; i++) {
+    
+//   }
+// }
+// pickRounds.addEventListener(`click`,function () {
+//   rounds()
+// })
+  //#endregion
   //#region diceRoll
   function rollTheDice() {
     dice.innerHTML = "";

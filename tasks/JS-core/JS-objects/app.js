@@ -20,4 +20,9 @@ console.log(user) */
     }
     let userEntires= object.entires(user)
     console.log (userEntires) */
-//#endregion
+//#endregion let user={
+    name: 'Rasim',
+    surname: 'Abbasov'
+    }
+    let userEntires= object.entires(user)
+    console.log (userEntires) */

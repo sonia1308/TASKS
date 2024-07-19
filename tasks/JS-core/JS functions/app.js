@@ -58,7 +58,7 @@ moneyCurrency(1200, 20) */
 
 }
 compare(12764, 123456,87654) */
-//#region 
+//#region
 
 //#region homeTask6
 /* let finalText
@@ -95,14 +95,22 @@ isEven(456789) */
 //#endregion
 
 //#region homeTask9
-/* function isPrime(number) {
-  for (let i = 2; i < number; i++) {
-    if (number % i === 0) {
-    console.log(`true`);
-    return false
-    }
-  }
-  console.log(`false`);
-};
-isPrime(7) */
+// let primeNum= []
+// function isPrime(number2) {
+//   for (let i = 2;  i < number2; i++) {
+//     if (number2 % i === 0) {
+//       primeNum.push(number2)
+//     }
+//   }console.log(primeNum);
+//   return primeNum
+  
+// };
+// isPrime(30)
 
+
+// function myFunction() {
+//   const a =1234
+//   const b =4321
+//  return <>a b</>
+// }
+// console.log(myFunction());

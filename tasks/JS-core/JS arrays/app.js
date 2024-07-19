@@ -198,8 +198,9 @@
 //   ];
 //   let newArray= array.map((element) => ( {name:element.name ,email:element.email }))
 // console.log(newArray);
+//#endregion
+
+//#region extraTasks
+
 
 //#endregion
-// let a = (1,2)
-// console.log(1,2);
-// console.log((1,2));

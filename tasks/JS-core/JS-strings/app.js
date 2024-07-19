@@ -33,13 +33,16 @@ console.log( textWithNoSpaces1.length);
 //#endregion
 
 //#region homeTask2
-/* let userName = prompt(`enter your name`)
-let userSurname = prompt(`enter your surname`)
-let nameSurname = userName +` `+ userSurname
-console.log(nameSurname);
-let userName1=nameSurname.slice(0, nameSurname.indexOf(` `))
-let userSurname1 = nameSurname.slice(nameSurname.indexOf(` `), nameSurname.length) 
-console.log (  userName1 + ` ` + userSurname1); */
+// let userName = prompt(`enter your name`);
+// let userSurname = prompt(`enter your surname`);
+// let nameSurname = userName + ` ` + userSurname;
+// console.log(nameSurname);
+// let userName1 = nameSurname.slice(0, nameSurname.indexOf(` `));
+// let userSurname1 = nameSurname.slice(
+//   nameSurname.indexOf(` `),
+//   nameSurname.length
+// );
+// console.log(userName1 + ` ` + userSurname1);
 //#endregion
 
 //#region homeTask3
@@ -65,9 +68,14 @@ checkPriceFormat() */
 //#endregion
 
 //#region homeTask5
-/* let fullName= prompt(`enter your full name`)
-let fullNameShorted = fullName.slice( 0, fullName.indexOf(" ")) + fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ")+2)+ `.`+fullName.slice(fullName.lastIndexOf(" ")+1, fullName.lastIndexOf(" ")+2)+`.`
-console.log(fullNameShorted); */
+// let fullName = 'salam dunya sagol' // prompt(`enter your full name`);
+// let fullNameShorted =
+//   fullName.slice(0, fullName.indexOf(" ")) +
+//   fullName.slice(fullName.indexOf(" "), fullName.indexOf(" ") + 2) +
+//   `.` +
+//   fullName.slice(fullName.lastIndexOf(" ") + 1, fullName.lastIndexOf(" ") + 2) +
+//   `.`;
+// console.log(fullNameShorted);
 //#endregion
 //#region homeTask6
 /* let userDateInput = prompt(`enter you date in YYYY.MM.DD  format`)
@@ -94,7 +102,6 @@ console.log(a.join(`-`)); */
 } */
 /* let correctedNUmber = numberString.slice(0,length(2))+`-`  */
 //#region homeTask6
-
 
 // let userDateFormatted = userDate3.slice(userDate3.indexOf(` `), userDate3.lastIndexOf(` `))
 
@@ -189,7 +196,6 @@ function repeatSymbolCounter(string, char) {
 repeatSymbolCounter(`ssssssoniia`,`i`) */
 //#endregion
 
-
 //#region homeTask10
 /* 
 function capitalize(str) {
@@ -240,3 +246,28 @@ removeCharacterFromString(`Loremn ipsum dolar sit amet`) */
 }
 checkIsEmail(`mdfhgj@email.com`) */
 //#endregion
+//#region extra
+// let fullName = 'salam dunya sagol' 
+// w1= fullName[0].toUpperCasefullName.slice(1, fullName.indexOf(` `))
+// w2= fullName.slice(fullName.indexOf(` `),fullName.lastIndexOf` `)
+// w3 = fullName.slice(fullName.lastIndexOf(` `),fullName.length)
+// fullNameShorted = w1+w2+w3
+// console.log(fullNameShorted);
+//#endregion
+//#region homeTask5
+// let fullName = 'salam dunya sagol' // prompt(`enter your full name`);
+// let fullNameShorted = fullName[0].toUpperCase()+ fullName.slice(1,fullName.indexOf(` `)) + ` `+
+// fullName[fullName.indexOf(` `)].toUpperCase()+ fullName.slice(fullName.indexOf(` `)+1,fullName.lastIndexOf(` `))
+// console.log(fullNameShorted);
+//#endregion
+
+//#region  extraTaskByElcin
+function isFirstCharCapital(str) {
+    return str.charAt(0) === str.charAt(0).toUpperCase() && str.charAt(0) !== str.charAt(0).toLowerCase();
+}
+
+let str1 = "Hello";
+let str2 = "world";
+
+console.log(isFirstCharCapital(str1)); 
+console.log(isFirstCharCapital(str2)); 

@@ -197,18 +197,18 @@
 //#endregion
 //#region homeTask10
 //#region homeTask10
-// let salary = [
-//   [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
-//   [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
-//   [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
-//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-//   [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
-//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-//   [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
-//   [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
-//   [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
-//   [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
-// ];
+let salary = [
+  [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+  [75, 75, 75, 75, 75, 75, 70, 77, 75, 75, 70, 75],
+  [150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 180],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 105, 105, 105, 105, 105],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120],
+  [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
+  [80, 80, 80, 80, 80, 80, 80, 90, 90, 90, 90, 90],
+  [75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 70, 75],
+];
 // function getSalaries(salary) {
 //     let result
 //     let salaries= []
@@ -228,34 +228,33 @@
 //     });console.log(monthlySalary);
 //     return
 // }
-// function getQuarterSalary(param) {
-//   let quarterSalary = [];
-//   let quarterResult =0
-//   let sliceResult
-//   salary.forEach((array) => {
-//     sliceResult=0
-//     switch (param) {
-//       case 1:
-//         quarterSalary.push(array.slice(0, 3));
-//         break;
-//       case 2:
-//         quarterSalary.push(array.slice(3, 6));
-//         break;
-//       case 3:
-//         quarterSalary.push(array.slice(6, 9));
-//         break;
-//       case 4:
-//         quarterSalary.push(array.slice(9, 12));
-//         break;
-//     }array.forEach(element => {
-//       sliceResult+=element
-//     });return quarterResult+=sliceResult
-//   });console.log(quarterResult);   
-  
-//   return quarterResult;
-// }
+function getQuarterSalary(param) {
+  let quarterSalary = [];
+  let quarterResult 
+  let sliceResult=0
+  salary.forEach((array) => {
+    // sliceResult=0
+    quarterResult =0
+    switch (param) {
+      case 1:
+        quarterSalary.push(array.slice(0, 3));
+        break;
+      case 2:
+        quarterSalary.push(array.slice(3, 6));
+        break;
+      case 3:
+        quarterSalary.push(array.slice(6, 9));
+        break;
+      case 4:
+        quarterSalary.push(array.slice(9, 12));
+        break;
+    }array.map(element => {
+      sliceResult+=element
+    });return quarterResult+=sliceResult 
+  });console.log(quarterResult);   
+  return quarterResult;
+}
 // getSalaries(salary)
 // getMonthlySalary(2)
 // getMonthlySalary(3)
-// getQuarterSalary(2);
-
+// getQuarterSalary(1);

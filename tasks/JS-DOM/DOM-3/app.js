@@ -20,9 +20,7 @@ const data = [
   { name: "Monero", ticker: "XMR", value: "79.523", change: "3.45%" },
   { name: "TRON", ticker: "TRX", value: "0.020881", change: "5.21%" },
 ];
-
 const cryptoTableBody = document.getElementById("crypto-table-body");
-
 function generateTableRows(data) {
   let tableRows = "";
   data.forEach((item) => {

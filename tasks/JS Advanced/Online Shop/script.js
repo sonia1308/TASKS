@@ -7,7 +7,7 @@ fetch(URL)
     const products = data.products;
     products.forEach((product, index) => {
       const productElement = `
-        <div id="product-${index}" class="product">
+        <div id="product-${index}" class="product" onclick="viewProduct(${product.id})">
           <div class="product-image">
             <img src="${product.thumbnail}" alt="${product.title}" />
           </div>
@@ -22,7 +22,7 @@ fetch(URL)
             </p>
             <p class="product-desc">${product.description}</p>
             <p class="product-price">$${product.price}</p>
-            <button class="add-favorite" onclick="toggleFavorite(${index})">
+            <button class="add-favorite" onclick="toggleFavorite(${index}); event.stopPropagation();">
               <i class="fa-regular fa-heart"></i>
             </button>
           </div>
@@ -35,6 +35,10 @@ fetch(URL)
   .catch(error => {
     console.error('Error fetching products:', error);
   });
+
+function viewProduct(id) {
+  window.location.href = `../Online Shop/pages/singleProduct.html?id=${id}`;
+}
 
 function toggleFavorite(index) {
   const favoriteButton = document.querySelector(`#product-${index} .add-favorite i`);
@@ -60,11 +64,9 @@ function toggleFavorite(index) {
     favoriteButton.classList.add('fa-solid');
   }
   
-//#region  localStorage
   localStorage.setItem('favoriteProducts', JSON.stringify(favoriteProducts));
 }
-//#endregion
-//#region update favorite button\
+
 function updateFavoriteButton(index) {
   const favoriteButton = document.querySelector(`#product-${index} .add-favorite i`);
   let favoriteProducts = JSON.parse(localStorage.getItem('favoriteProducts')) || [];

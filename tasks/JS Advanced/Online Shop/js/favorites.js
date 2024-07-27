@@ -7,8 +7,7 @@ function loadFavorites() {
         productsWrapper.innerHTML = '<p>No favorites yet!</p>';
         return;
     }
-
-    favoriteProducts.forEach(product => {
+    favoriteProducts.forEach(product => {c
         const productElement = `
             <div class="product">
                 <div class="product-image">

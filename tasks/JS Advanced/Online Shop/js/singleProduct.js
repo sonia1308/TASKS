@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     console.log(`Product ID: ${productId}`); 
-  
+    
     const URL = `https://dummyjson.com/products/${productId}`;
   
     fetch(URL)
@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Product not found');
           return;
         }
-  
         const contentWrapper = document.querySelector('.content-wrapper');
   
         const productElement = `
@@ -29,12 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product-body">
               <h1 class="product-title">${product.title}</h1>
               <p class="product-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </p>
+              ${product.stars}
+            </p>
               <p class="product-desc">${product.description}</p>
               <p class="product-price">$${product.price}</p>
             </div>

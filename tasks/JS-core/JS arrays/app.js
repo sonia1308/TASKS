@@ -202,5 +202,10 @@
 
 //#region extraTasks
 
+// function log() {
+//     a = console.log(11);
+//     return a
+// }
+// console.log(console.log(11),12);
 
 //#endregion

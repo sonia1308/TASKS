@@ -2,19 +2,18 @@ const URL = "https://restcountries.com/v3.1/all";
 const countriesTemplate = document.getElementById("countries-template");
 const container = document.getElementById("countries-container");
 const search = document.getElementById("search");
+const searchBtn = document.getElementById("search-btn");
+const dropdownRegion = document.querySelectorAll(".dropdown-region");
+const darkModeBtn = document.getElementById("dark-mode-btn");
 
+const lightModeBtn = document.getElementById("light-mode-btn")
+const switchMode = document.getElementById("switch");
 let countries = [];
-
-search.addEventListener("input", (e) => {
-  const value = e.target.value.toLowerCase();
-  countries.forEach((country) => {
-    const isVisible =
-      country.name.toLowerCase().includes(value) ||
-      (country.capital && country.capital[0].toLowerCase().includes(value));
-    country.element.classList.toggle("hidden", !isVisible);
-  });
+document.getElementById("search-form").addEventListener("submit", (a) => {
+  a.preventDefault();
 });
 
+//#region fetch data
 fetch(URL)
   .then((res) => res.json())
   .then((data) => {
@@ -34,7 +33,6 @@ fetch(URL)
       capital.innerHTML = `Capital: <span class="font-medium">${
         country.capital ? country.capital[0] : "N/A"
       }</span>`;
-
       container.appendChild(card);
       return {
         flag: country.flags.png,
@@ -49,3 +47,54 @@ fetch(URL)
   .catch((error) => {
     console.error("Error fetching country data:", error);
   });
+//#endregion
+//#region search
+searchBtn.addEventListener("click", (e) => {
+  const value = search.value.toLowerCase();
+  countries.forEach((country) => {
+    const isVisible =
+      country.name.toLowerCase().includes(value) ||
+      (country.capital && country.capital[0].toLowerCase().includes(value));
+    country.element.classList.toggle("hidden", !isVisible);
+  });
+});
+dropdownRegion.forEach((dropdownRegions) => {
+  dropdownRegions.addEventListener("click", filterRegions);
+  function filterRegions() {
+    countries.forEach((country) => {
+      const isVisible = country.region.includes(dropdownRegions.innerText);
+      country.element.classList.toggle("hidden", !isVisible);
+    });
+  }
+});
+
+//#endregion
+
+
+//#region dark mode
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+darkModeBtn.addEventListener("click", darkMode);
+lightModeBtn.addEventListener("click",lightMode)
+function darkMode() {
+  const body = document.body;
+  body.classList.toggle("dark");
+  darkModeBtn.classList.add("hidden")
+  lightModeBtn.classList.remove("hidden")
+console.log();
+localStorage.setItem('status', true);
+}
+function lightMode() {
+  const body = document.body;
+  body.classList.toggle("dark");
+  lightModeBtn.classList.add("hidden")
+  darkModeBtn.classList.remove("hidden")
+console.log();
+localStorage.setItem('status', true);
+}
+
+
+//#endregion

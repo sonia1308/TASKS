@@ -1,70 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/c4d75d0101.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-image: url('./assets/bg.jpg'); 
-      background-size: cover;
-      background-attachment: fixed;
-    }
-  </style>
-</head>
-<body class="overlay">
-  <header class="bg-gray-300 sticky top-0 z-50 px-10 overlay">
-    <div class="container mx-auto flex justify-between items-center py-4">
-      <nav class="justify-items-center">
-        <ul class="flex justify-between space-x-3 text-gray-800">
-          <li><h1 class="text-xl font-semibold">Discover the world</h1></li>
-        </ul>
-      </nav>
-      <div class="items-center space-x-4">
-        <a href="#" class="bg-gray-800 text-white hover:bg-gray-600 font-semibold px-4 py-2 rounded-full"><i class="fa-regular fa-moon"></i> Dark Mode</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="flex p-3 items-center">
-      <form action="/search" class="max-w-[480px] w-fit px-4 overlay">
-        <div class="relative">
-          <input type="text" id="search" class="w-full focus:outline-none h-12 shadow-md p-4 rounded-full bg-white bg-opacity-80 text-gray-800" placeholder="search">
-          <button type="submit">
-            <svg class="text-teal-500 h-5 w-5 absolute top-3.5 right-3 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
-              <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
-            </svg>
-          </button>
-        </div>
-      </form>
-    </div>
-    <div id="countries-container" class="container mx-auto p-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 overlay">
-      <template id="countries-template">
-        <div class="bg-white bg-opacity-80 rounded-lg overflow-hidden shadow-lg">
-          <img src="" alt="Country Flag" class="flag w-full h-60 object-cover">
-          <div class="p-4">
-            <h2 class="name text-lg font-bold text-gray-800">Country Name 1</h2>
-            <p class="population text-sm text-gray-700 mt-1">Population: <span class="font-medium">10,000,000</span></p>
-            <p class="region text-sm text-gray-700">Region: <span class="font-medium">Continent</span></p>
-            <p class="capital text-sm text-gray-700">Capital: <span class="font-medium">Capital City</span></p>
-          </div>
-        </div>
-      </template>
-    </div>
-  </main>
-
-  <script>
-    (function() {
-      const originalWarn = console.warn;
-      console.warn = function(msg) {
-        if (!msg.includes('cdn.tailwindcss.com should not be used in production')) {
-          originalWarn.apply(console, arguments);
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            backgroundImage: {
+              light: "url('./assets/bg.jpg')",
+              dark: "url('./assets/bg-dark.jpg')",
+            },
+          },
+        },
       };
-    })();
-  </script>
-  <script src="./app.js"></script>
-</body>
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4d75d0101.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      /* body {
+        background-image: url("./assets/bg.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .dark-mode{
+        background-image: url("./assets/bg-dark.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      } */
+    </style>
+  </head>
+  <body
+    class="dark:bg-dark bg-light bg-cover bg-center bg-fixed h-screen w-full"
+  >
+    <header
+      class="bg-gray-300 dark:bg-opacity-0 sticky top-0 z-50 px-10 overlay"
+    >
+      <div class="container mx-auto flex justify-between items-center py-4">
+        <nav class="justify-items-center">
+          <ul
+            class="flex justify-between space-x-3 text-gray-800 dark:text-white"
+          >
+            <li><h1 class="text-3xl font-semibold">Discover the world</h1></li>
+          </ul>
+        </nav>
+        <div id="switch" class="items-center space-x-4">
+          <a
+            id="dark-mode-btn"
+            href="#"
+            class="bg-gray-800 text-white dark:bg-opacity-0 hover:bg-gray-600 font-semibold px-4 py-2 rounded-full"
+            ><i class="fa-regular fa-moon"></i> Dark Mode</a
+          >
+          <a
+            id="light-mode-btn"
+            href="#"
+            class="text-white hidden hover:bg-gray-600 hover:bg-opacity-30 font-semibold px-4 py-2 rounded-full"
+            ><i class="fa-regular fa-sun"></i> Light Mode</a
+          >
+        </div>
+      </div>
+    </header>
+    <main >
+      <div class="flex pt-8 pl-8 pr-20 items-baseline justify-between gap-40">
+        <form action="/search" class="max-w-[480px] w-fit px-4 overlay" id="search-form"> 
+          <div class="relative">
+            <input
+              type="text"
+              id="search"
+              class="w-full h-12 shadow-md p-4 rounded-full bg-white dark:bg-opacity-0 dark:ring-1 dark:ring-gray-700 dark:focus:ring-1 dark:text-white bg-opacity-80 text-gray-800 border-none focus:ring-gray-300 focus:ring-2"
+              placeholder="Search"
+              autocomplete="off"
+            />
+            <button type="submit" class="absolute right-0 top-0 mt-3 mr-4" id="search-btn">
+              <i class="fa-solid fa-magnifying-glass text-gray-500 hover:text-gray-700 dark:hover:text-white"></i>
+            </button>
+          </div>
+        </form>
+        
+
+        <button
+  id="dropdownDelayButton"
+  data-dropdown-toggle="dropdownDelay"
+  data-dropdown-delay="500"
+  data-dropdown-trigger="click"
+  class=" items-center justify-center dark:bg-opacity-0 dark:ring-1 dark:text-white dark:hover:bg-opacity-0 dark:ring-gray-600 hover:bg-gray-600 focus:outline-none border-none  focus:ring-gray-300 focus:ring-2 font-medium text-sm text-center inline-flex h-12 shadow-md px-4 py-2 rounded-full bg-white bg-opacity-80 text-gray-800 hover:text-white border border-gray-500"
+  type="button"
+>
+  Region
+  <i class="fa-solid fa-chevron-down text-xs ml-2"></i>
+</button>
+        <div
+          id="dropdownDelay"
+          class="z-10 hidden  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-opacity-50 dark:text-black"
+        >
+          <ul
+            class="py-2 text-sm"
+            aria-labelledby="dropdownDelayButton"
+          >
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Africa</
+                ></button>
+            </li>
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Americas</
+              ></button>
+            </li>
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Antarctic</
+              ></button>
+            </li>
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Asia</
+              ></button>
+            </li>
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Europe</
+              ></button>
+            </li>
+            <li>
+              <button
+                class="dropdown-region block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:opacity-90 "
+                >Oceania</
+              ></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        id="countries-container"
+        class="container mx-auto p-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 overlay"
+      >
+        <template id="countries-template">
+          <div
+            class="hover:cursor-pointer bg-opacity-80 rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              src=""
+              alt="Country Flag"
+              class="flag w-full h-60 object-cover dark:opacity-60"
+            />
+            <div class="p-4 bg-white dark:bg-opacity-0  text-gray-700 dark:text-white opacity-80">
+              <h2 class="name text-lg font-bold ">
+                Country Name 1
+              </h2>
+              <p class="population text-sm  mt-1">
+                Population: <span class="font-medium">10,000,000</span>
+              </p>
+              <p class="region text-sm ">
+                Region: <span class="font-medium">Continent</span>
+              </p>
+              <p class="capital text-sm ">
+                Capital: <span class="font-medium">Capital City</span>
+              </p>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        const originalWarn = console.warn;
+        console.warn = function (msg) {
+          if (
+            !msg.includes(
+              "cdn.tailwindcss.com should not be used in production"
+            )
+          ) {
+            originalWarn.apply(console, arguments);
+          }
+        };
+      })();
+    </script>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  </body>
 </html>
+
+      </div>
+    </header>
+  </body>
+</html>
+

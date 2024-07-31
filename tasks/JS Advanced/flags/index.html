@@ -9,28 +9,17 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "selector",
-        theme: {
-          extend: {
-            backgroundImage: {
-              light: "url('./assets/bg.jpg')",
-              dark: "url('./assets/bg-dark.jpg')",
-            },
-          },
-        },
-      };
-    </script>
+    <script src="./src/js/config.js"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
-      rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+    rel="stylesheet"
     />
     <script
-      src="https://kit.fontawesome.com/c4d75d0101.js"
-      crossorigin="anonymous"
+    src="https://kit.fontawesome.com/c4d75d0101.js"
+    crossorigin="anonymous"
     ></script>
-
+    
+    <link rel="stylesheet" href="./src/output.css">
     <style>
       /* body {
         background-image: url("./assets/bg.jpg");
@@ -63,14 +52,17 @@
             id="dark-mode-btn"
             href="#"
             class="bg-gray-800 text-white dark:bg-opacity-0 hover:bg-gray-600 font-semibold px-4 py-2 rounded-full"
-            ><i class="fa-regular fa-moon"></i> Dark Mode</a
           >
-          <a
+            <i class="fa-regular fa-moon"></i> 
+            
+            Dark Mode
+          </a>
+          <!-- <a
             id="light-mode-btn"
             href="#"
             class="text-white hidden hover:bg-gray-600 hover:bg-opacity-30 font-semibold px-4 py-2 rounded-full"
             ><i class="fa-regular fa-sun"></i> Light Mode</a
-          >
+          > -->
         </div>
       </div>
     </header>
@@ -156,7 +148,7 @@
       >
         <template id="countries-template">
           <div
-            class="hover:cursor-pointer bg-opacity-80 rounded-lg overflow-hidden shadow-lg"
+            class="cards hover:cursor-pointer bg-opacity-80 rounded-lg overflow-hidden shadow-lg"
           >
             <img
               src=""
@@ -196,13 +188,8 @@
         };
       })();
     </script>
-    <script src="./app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script type="module" src="./app.js"></script>
+    <!-- <script type="module" src="./src/js/pages.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
   </body>
 </html>
-
-      </div>
-    </header>
-  </body>
-</html>
-

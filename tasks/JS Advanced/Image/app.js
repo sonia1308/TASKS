@@ -34,7 +34,6 @@ function displayImages(images) {
     imagesWrapper.innerHTML += imageElement;
   });
 }
-
 searchButton.addEventListener('click', async () => {
   const query = inputField.value.trim();
   

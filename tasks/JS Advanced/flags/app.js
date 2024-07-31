@@ -6,13 +6,13 @@ const searchBtn = document.getElementById("search-btn");
 const dropdownRegion = document.querySelectorAll(".dropdown-region");
 const darkModeBtn = document.getElementById("dark-mode-btn");
 
-const lightModeBtn = document.getElementById("light-mode-btn")
+const lightModeBtn = document.getElementById("light-mode-btn");
 const switchMode = document.getElementById("switch");
+
 let countries = [];
 document.getElementById("search-form").addEventListener("submit", (a) => {
   a.preventDefault();
 });
-
 //#region fetch data
 fetch(URL)
   .then((res) => res.json())
@@ -24,7 +24,6 @@ fetch(URL)
       const region = card.querySelector(".region");
       const population = card.querySelector(".population");
       const capital = card.querySelector(".capital");
-
       flag.src = country.flags.png;
       flag.alt = `${country.name.common} Flag`;
       countryName.textContent = country.name.common;
@@ -47,6 +46,8 @@ fetch(URL)
   .catch((error) => {
     console.error("Error fetching country data:", error);
   });
+
+
 //#endregion
 //#region search
 searchBtn.addEventListener("click", (e) => {
@@ -67,34 +68,48 @@ dropdownRegion.forEach((dropdownRegions) => {
     });
   }
 });
-
 //#endregion
-
-
 //#region dark mode
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
-} else {
-  document.documentElement.classList.remove('dark')
-}
-darkModeBtn.addEventListener("click", darkMode);
-lightModeBtn.addEventListener("click",lightMode)
-function darkMode() {
-  const body = document.body;
-  body.classList.toggle("dark");
-  darkModeBtn.classList.add("hidden")
-  lightModeBtn.classList.remove("hidden")
-console.log();
-localStorage.setItem('status', true);
-}
-function lightMode() {
-  const body = document.body;
-  body.classList.toggle("dark");
-  lightModeBtn.classList.add("hidden")
-  darkModeBtn.classList.remove("hidden")
-console.log();
-localStorage.setItem('status', true);
-}
+// if (
+//   localStorage.theme === "dark" ||
+//   (!("theme" in localStorage) &&
+//     window.matchMedia("(prefers-color-scheme: dark)").matches)
+// ) {
+//   document.documentElement.classList.add("dark");
+// } else {
+//   document.documentElement.classList.remove("dark");
+// }
 
+// darkModeBtn.addEventListener("click", darkMode);
+// lightModeBtn.addEventListener("click", lightMode);
+// function darkMode() {
+//   body.classList.toggle("dark");
+//   darkModeBtn.classList.add("hidden");
+//   lightModeBtn.classList.remove("hidden");
+//   console.log();
+//   localStorage.setItem("status", true);
+// }
+// function lightMode() {
+//   body.classList.toggle("dark");
+//   lightModeBtn.classList.add("hidden");
+//   darkModeBtn.classList.remove("hidden");
+//   console.log();
+//   localStorage.setItem("status", true);
+// }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const mode = localStorage.getItem("mode") || "light";
+  document.querySelector("html").classList.add(mode);
+  const btn = document.querySelector("#dark-mode-btn");
+  btn.innerHTML = mode === "light" ? "Dark Mode" : "Light Mode";
+});
+const btn = document.querySelector("#dark-mode-btn");
+btn.addEventListener("click", () => {
+  const currentMode = localStorage.getItem("mode") || "light";
+  const newMode = currentMode === "light" ? "dark" : "light";
+  localStorage.setItem("mode", newMode);
+  document.querySelector("html").classList.remove(currentMode);
+  document.querySelector("html").classList.add(newMode);
+  btn.innerHTML = newMode === "light" ? " Dark Mode" : "Light Mode";
+});
 //#endregion

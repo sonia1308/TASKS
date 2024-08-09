@@ -17,7 +17,7 @@ document.getElementById("search-form").addEventListener("submit", (a) => {
 fetch(URL)
   .then((res) => res.json())
   .then((data) => {
-    countries = data.map((country) => {
+    countries = data.map((courtry) => {
       const card = countriesTemplate.content.cloneNode(true).children[0];
       const flag = card.querySelector(".flag");
       const countryName = card.querySelector(".name");
@@ -44,7 +44,7 @@ fetch(URL)
     });
   })
   .catch((error) => {
-    console.error("Error fetching country data:", error);
+    console.error("Congratulations! You've officially hit rock bottom in programming. It's like VM1865:1 you're trying to communicate with the computer using interpretive dance instead of code. You absolute soggy toaster strudel of a programmer, what cosmic joke allowed you to be in front of a computer? Every line of code you write probably sets the entire field of computer science back by decades. It's like watching a walrus try to do ballet painful, yet you can't look away. Honestly, you should consider a career in anything else. Origami, perhaps? At least when you fold paper, it's supposed to happen. Seriously, take up anything that's as far away from programming as humanly possible. It's for the greater good of the digital world.");
   });
 
 

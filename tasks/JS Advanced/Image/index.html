@@ -1,44 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Tailwind Project</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/c4d75d0101.js" crossorigin="anonymous"></script>
-</head>
-<body class="bg-gray-200">
-  <header class="bg-gray-300 sticky top-0 z-50 px-10">
-    <div class="container mx-auto flex justify-between items-center py-4">
-      <nav class="justify-items-center">
-        <ul class="flex justify-between space-x-3 text-gray-800">
-          <li><h1 class="text-xl font-semibold">Where in the world?</h1></li>
-        </ul>
-      </nav>
-      <div class="items-center space-x-4">
-        <a href="#" class="bg-gray-800 text-white hover:bg-gray-600 font-semibold px-4 py-2 rounded-full"><i class="fa-regular fa-moon"></i> Dark Mode</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="flex p-3 items-center">
-      <form action="/search" class="max-w-[480px] w-full px-4">
-        <div class="relative">
-          <input type="text" name="q" class="w-full focus:outline-none h-12 shadow-md p-4 rounded-full bg-white text-gray-800" placeholder="search">
-          <button type="submit">
-            <svg class="text-teal-500 h-5 w-5 absolute top-3.5 right-3 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
-              <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
-            </svg>
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <div id="countries-container" class="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- Country cards will be dynamically inserted here -->
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images Search</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <label for="input" class="search_box">
+        <input type="text" name="input" id="input-value" placeholder="Search for images..." />
+        <button class="search-button">Search</button>
+      </label>
+      <section class="images-wrapper">
+      </section>
+      </main>
+      <script src="./app.js"></script>
+      </body>

@@ -6,7 +6,7 @@ const imagesWrapper = document.querySelector('.images-wrapper');
 async function fetchImages(query) {
   const url = `${BASE_URL}&q=${encodeURIComponent(query)}&image_type=photo`;
   const response = await fetch(url);
-  
+
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
@@ -34,9 +34,10 @@ function displayImages(images) {
     imagesWrapper.innerHTML += imageElement;
   });
 }
+
 searchButton.addEventListener('click', async () => {
   const query = inputField.value.trim();
-  
+
   if (query) {
     try {
       const images = await fetchImages(query);

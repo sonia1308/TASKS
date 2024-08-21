@@ -43,9 +43,9 @@ function EditIcon() {
   );
 }
 
-export const EdittIcon = () => {
+export const EdittIcon = ({ onClick }) => {
   return (
-    <IconButton variant="outlined" color="teal">
+    <IconButton variant="outlined" color="teal" onClick={onClick}>
       <EditIcon />
     </IconButton>
   );

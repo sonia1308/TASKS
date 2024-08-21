@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { ListItem, ListItemSuffix, Checkbox } from "@material-tailwind/react";
 import { TrashhIcon, EdittIcon } from "../assets/icons/icons";
+import { TodoContext } from "../context/todos";
 
 const url = "http://localhost:3000/todos";
 
 const SingleTodo = () => {
-  const [todos, setTodos] = useState([]);
+  const { todos, setTodos } = useContext(TodoContext);
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -30,6 +32,24 @@ const SingleTodo = () => {
       });
   };
 
+  const updateTodo = (id) => {
+    const clickedTodo = todos.find((t) => t.id === id);
+    const userInput = prompt("Edit your todo", clickedTodo.title);
+    clickedTodo.title = userInput;
+
+    fetch(`http://localhost:3000/todos/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(clickedTodo),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setTodos((prev) => [...prev]);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
   return (
     <ul>
       {todos.map(({ id, title }) => (
@@ -39,7 +59,7 @@ const SingleTodo = () => {
           <h2 className="flex-grow">{title}</h2>
 
           <ListItemSuffix className="flex gap-2">
-            <EdittIcon />
+            <EdittIcon onClick={() => updateTodo(id)} />
 
             <TrashhIcon onClick={() => removeTodo(id)} />
           </ListItemSuffix>

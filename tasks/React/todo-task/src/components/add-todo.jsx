@@ -1,6 +1,41 @@
+import { v4 } from "uuid";
+import { useContext, useRef } from "react";
+import { TodoContext } from "../context/todos";
+
+function Todo(title) {
+  // this.id = new Date().getTime();
+  this.id = v4();
+  this.title = title;
+  this.completed = false;
+}
+
 export const AddTodo = () => {
+  const inputRef = useRef();
+  const { setTodos } = useContext(TodoContext);
+
+  function addTodoHandler(e) {
+    e.preventDefault();
+    const inputValue = inputRef.current.value;
+    const newTodo = new Todo(inputValue);
+
+    fetch("http://localhost:3000/todos", {
+      method: "POST",
+      body: JSON.stringify(newTodo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setTodos((prev) => [...prev, data]);
+          inputRef.current.value = "";
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
-    <form id="todo-form">
+    <form id="todo-form" onSubmit={addTodoHandler}>
       <div className="flex mt-4 mb-4 pl-2 pt-1 pr-2 pb-1 opacity-90">
         <input
           type="text"
@@ -8,11 +43,10 @@ export const AddTodo = () => {
           id="todo-input"
           placeholder="Add new task"
           required
+          ref={inputRef}
         />
-        <button
-          type="submit"
-          className="add-todo bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-1 px-5 rounded-lg"
-        >
+
+        <button className="add-todo bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-1 px-5 rounded-lg">
           Add
         </button>
       </div>

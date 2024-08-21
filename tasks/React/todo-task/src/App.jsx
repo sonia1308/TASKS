@@ -11,6 +11,7 @@ function App() {
           <div className="flex justify-center">
             <Form />
           </div>
+
           <div className=" flex justify-center">
             <TodoList />
           </div>

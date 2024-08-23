@@ -1,6 +1,8 @@
 import { v4 } from "uuid";
 import { useContext, useRef } from "react";
 import { TodoContext } from "../context/todos";
+import useTodos from "../zustand";
+import toast from "react-hot-toast";
 
 function Todo(title) {
   // this.id = new Date().getTime();
@@ -11,7 +13,8 @@ function Todo(title) {
 
 export const AddTodo = () => {
   const inputRef = useRef();
-  const { setTodos } = useContext(TodoContext);
+  // const { setTodos } = useContext(TodoContext);
+  const { todos, setTodos } = useTodos((state) => state);
 
   function addTodoHandler(e) {
     e.preventDefault();
@@ -25,8 +28,11 @@ export const AddTodo = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          setTodos((prev) => [...prev, data]);
+          setTodos([...todos, data]);
           inputRef.current.value = "";
+          toast.success("Yeni todo ugurla elave olundu", {
+            position: "bottom-center",
+          });
         }
       })
       .catch((err) => {
